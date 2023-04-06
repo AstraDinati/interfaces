@@ -1,0 +1,28 @@
+interface_exists — Проверяет, определён ли интерфейс
+
+Описание 
+interface_exists(string $interface, bool $autoload = true): bool
+Проверяет, определён ли указанный интерфейс.
+
+Список параметров 
+interface - Имя интерфейса
+
+autoload - Определяет, использовать ли по умолчанию __autoload или нет
+
+Возвращаемые значения 
+Возвращает true, если интерфейс c заданным именем interface был определён 
+или false в противном случае.
+
+Примеры 
+Пример #1 Пример использования interface_exists()
+
+<?php
+// Проверяем существование интерфейса перед его использованием
+if (interface_exists('MyInterface')) {
+    class MyClass implements MyInterface
+    {
+        // Методы
+    }
+}
+
+?>

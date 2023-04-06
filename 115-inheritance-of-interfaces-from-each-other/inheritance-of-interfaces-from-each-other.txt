@@ -1,0 +1,44 @@
+Наследование интерфейсов друг от друга
+Интерфейсы, так же, как и классы, могут наследовать друг от друга с помощью оператора 
+extends. Давайте посмотрим на примере. Пусть у нас есть такой интерфейс из прошлого 
+урока:
+
+<?php
+	interface iRectangle
+	{
+		public function __construct($a, 
+			$b); 
+		public function getSquare();
+		public function getPerimeter();
+	}
+?>
+Однако у нас уже есть интерфейс iFigure, описывающий часть методов нашего интерфейса:
+
+<?php
+	interface iFigure
+	{
+		public function getSquare();
+		public function getPerimeter();
+	}
+?>
+Давайте сделаем так, чтобы интерфейс iRectangle наследовал методы интерфейса iFigure:
+
+<?php
+	interface iRectangle extends iFigure
+	{
+		public function __construct($a, 
+			$b); 
+	}
+?>
+№1⊗ppOpIfIFI
+
+Сделайте интерфейс iUser с методами getName, setName, getAge, setAge.
+
+№2⊗ppOpIfIFI
+
+Сделайте интерфейс iEmployee, наследующий от интерфейса iUser и добавляющий в него 
+методы getSalary и setSalary.
+
+№3⊗ppOpIfIFI
+
+Сделайте класс Employee, реализующий интерфейс iEmployee.
